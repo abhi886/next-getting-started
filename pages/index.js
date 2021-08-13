@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../src/components/layout";
 import utilStyles from "../styles/utils.module.css";
-import Alert from "../components/alert";
+import Alert from "../src/components/alert";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Date from "../components/date";
+import Date from "../src/components/date";
 
 export default function Home({ allPostsData }) {
   return (
@@ -34,6 +34,14 @@ export default function Home({ allPostsData }) {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section>
+          <button>
+            <Link href={`/product`}>
+              <a>View Excersize1</a>
+            </Link>
+          </button>
         </section>
       </Layout>
       <Alert type='error'>
