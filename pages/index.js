@@ -38,7 +38,7 @@ export default function Home({ allPostsData }) {
 
         <section>
           <button>
-            <Link href={`/product`}>
+            <Link href={`/products`}>
               <a>View Excersize1</a>
             </Link>
           </button>

@@ -1,4 +1,5 @@
 import ProductLayout from "../../src/components/productlayout";
+import BackButton from "../../src/shared/BackButton";
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
@@ -20,18 +21,6 @@ export const getStaticPaths = async () => {
       },
     };
   });
-
-  // const paths = [
-  //   {
-  //     params: { id: "1" },
-  //   },
-  // ];
-
-  // const paths = [
-  //   { params: { id: "1" } },
-  //   { params: { id: "2" } },
-  //   { params: { id: "this" } },
-  // ];
   return {
     paths,
     fallback: false,
@@ -47,6 +36,7 @@ const Details = ({ data }) => {
         <h2>{data.email}</h2>
         <h3>{data.email}</h3>
       </div>
+      <BackButton></BackButton>
     </ProductLayout>
   );
 };
